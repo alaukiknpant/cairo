@@ -697,7 +697,7 @@ impl Display for CoreHint {
                     curr = {}
                     end = {}
                     while curr != end:
-                        print(memory[curr])
+                        print(hex(memory[curr]))
                         curr += 1
                 ",
                 ResOperandFormatter(start),
