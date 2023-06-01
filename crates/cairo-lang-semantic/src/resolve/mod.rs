@@ -470,6 +470,7 @@ impl<'db> Resolver<'db> {
                 ResolvedConcreteItem::Module(module_id)
             }
             ResolvedGenericItem::GenericFunction(generic_function) => {
+                // TODO(yg): here??
                 ResolvedConcreteItem::Function(self.specialize_function(
                     diagnostics,
                     identifier.stable_ptr().untyped(),
