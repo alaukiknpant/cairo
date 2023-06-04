@@ -21,57 +21,86 @@ StatementList
 StatementLet
 
 //! > expected_diagnostics
+error: Skipped tokens. Expected: statement.
+ --> dummy_file.cairo:3:7
+    x += 5;
+      ^^
+
+error: Skipped tokens. Expected: statement.
+ --> dummy_file.cairo:4:7
+    x -= 5;
+      ^^
+
+error: Skipped tokens. Expected: statement.
+ --> dummy_file.cairo:5:7
+    x *= 5;
+      ^^
+
+error: Skipped tokens. Expected: statement.
+ --> dummy_file.cairo:6:7
+    x /= 5;
+      ^^
+
+error: Skipped tokens. Expected: statement.
+ --> dummy_file.cairo:7:7
+    x %= 5;
+      ^^
+
+error: Skipped tokens. Expected: statement.
+ --> dummy_file.cairo:8:7
+    x = 5;
+      ^
 
 //! > expected_tree
 └── Top level kind: StatementList
     ├── child #0 (kind: StatementLet) <ignored>
     ├── child #1 (kind: StatementExpr)
-    │   ├── expr (kind: ExprBinary)
-    │   │   ├── lhs (kind: ExprPath)
-    │   │   │   └── item #0 (kind: PathSegmentSimple)
-    │   │   │       └── ident (kind: TokenIdentifier): 'x'
-    │   │   ├── op (kind: TokenPlusEq): '+='
-    │   │   └── rhs (kind: TokenLiteralNumber): '5'
-    │   └── semicolon (kind: TokenSemicolon): ';'
+    │   ├── expr (kind: ExprPath)
+    │   │   └── item #0 (kind: PathSegmentSimple)
+    │   │       └── ident (kind: TokenIdentifier): 'x'
+    │   └── semicolon (kind: OptionTerminalSemicolonEmpty) []
     ├── child #2 (kind: StatementExpr)
-    │   ├── expr (kind: ExprBinary)
-    │   │   ├── lhs (kind: ExprPath)
-    │   │   │   └── item #0 (kind: PathSegmentSimple)
-    │   │   │       └── ident (kind: TokenIdentifier): 'x'
-    │   │   ├── op (kind: TokenMinusEq): '-='
-    │   │   └── rhs (kind: TokenLiteralNumber): '5'
+    │   ├── expr (kind: TokenLiteralNumber): '5'
     │   └── semicolon (kind: TokenSemicolon): ';'
     ├── child #3 (kind: StatementExpr)
-    │   ├── expr (kind: ExprBinary)
-    │   │   ├── lhs (kind: ExprPath)
-    │   │   │   └── item #0 (kind: PathSegmentSimple)
-    │   │   │       └── ident (kind: TokenIdentifier): 'x'
-    │   │   ├── op (kind: TokenMulEq): '*='
-    │   │   └── rhs (kind: TokenLiteralNumber): '5'
-    │   └── semicolon (kind: TokenSemicolon): ';'
+    │   ├── expr (kind: ExprPath)
+    │   │   └── item #0 (kind: PathSegmentSimple)
+    │   │       └── ident (kind: TokenIdentifier): 'x'
+    │   └── semicolon (kind: OptionTerminalSemicolonEmpty) []
     ├── child #4 (kind: StatementExpr)
-    │   ├── expr (kind: ExprBinary)
-    │   │   ├── lhs (kind: ExprPath)
-    │   │   │   └── item #0 (kind: PathSegmentSimple)
-    │   │   │       └── ident (kind: TokenIdentifier): 'x'
-    │   │   ├── op (kind: TokenDivEq): '/='
-    │   │   └── rhs (kind: TokenLiteralNumber): '5'
+    │   ├── expr (kind: TokenLiteralNumber): '5'
     │   └── semicolon (kind: TokenSemicolon): ';'
     ├── child #5 (kind: StatementExpr)
-    │   ├── expr (kind: ExprBinary)
-    │   │   ├── lhs (kind: ExprPath)
-    │   │   │   └── item #0 (kind: PathSegmentSimple)
-    │   │   │       └── ident (kind: TokenIdentifier): 'x'
-    │   │   ├── op (kind: TokenModEq): '%='
-    │   │   └── rhs (kind: TokenLiteralNumber): '5'
+    │   ├── expr (kind: ExprPath)
+    │   │   └── item #0 (kind: PathSegmentSimple)
+    │   │       └── ident (kind: TokenIdentifier): 'x'
+    │   └── semicolon (kind: OptionTerminalSemicolonEmpty) []
+    ├── child #6 (kind: StatementExpr)
+    │   ├── expr (kind: TokenLiteralNumber): '5'
     │   └── semicolon (kind: TokenSemicolon): ';'
-    └── child #6 (kind: StatementExpr)
-        ├── expr (kind: ExprBinary)
-        │   ├── lhs (kind: ExprPath)
-        │   │   └── item #0 (kind: PathSegmentSimple)
-        │   │       └── ident (kind: TokenIdentifier): 'x'
-        │   ├── op (kind: TokenEq): '='
-        │   └── rhs (kind: TokenLiteralNumber): '5'
+    ├── child #7 (kind: StatementExpr)
+    │   ├── expr (kind: ExprPath)
+    │   │   └── item #0 (kind: PathSegmentSimple)
+    │   │       └── ident (kind: TokenIdentifier): 'x'
+    │   └── semicolon (kind: OptionTerminalSemicolonEmpty) []
+    ├── child #8 (kind: StatementExpr)
+    │   ├── expr (kind: TokenLiteralNumber): '5'
+    │   └── semicolon (kind: TokenSemicolon): ';'
+    ├── child #9 (kind: StatementExpr)
+    │   ├── expr (kind: ExprPath)
+    │   │   └── item #0 (kind: PathSegmentSimple)
+    │   │       └── ident (kind: TokenIdentifier): 'x'
+    │   └── semicolon (kind: OptionTerminalSemicolonEmpty) []
+    ├── child #10 (kind: StatementExpr)
+    │   ├── expr (kind: TokenLiteralNumber): '5'
+    │   └── semicolon (kind: TokenSemicolon): ';'
+    ├── child #11 (kind: StatementExpr)
+    │   ├── expr (kind: ExprPath)
+    │   │   └── item #0 (kind: PathSegmentSimple)
+    │   │       └── ident (kind: TokenIdentifier): 'x'
+    │   └── semicolon (kind: OptionTerminalSemicolonEmpty) []
+    └── child #12 (kind: StatementExpr)
+        ├── expr (kind: TokenLiteralNumber): '5'
         └── semicolon (kind: TokenSemicolon): ';'
 
 //! > ==========================================================================

@@ -31,6 +31,11 @@ error: Skipped tokens. Expected: statement.
     let ref abc::def = 5;
                ^^
 
+error: Skipped tokens. Expected: statement.
+ --> dummy_file.cairo:2:22
+    let ref abc::def = 5;
+                     ^
+
 error: Missing token TerminalRBrace.
  --> dummy_file.cairo:3:14
     let A { x

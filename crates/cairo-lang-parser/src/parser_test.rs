@@ -329,6 +329,7 @@ cairo_lang_test_utils::test_file_test!(
     partial_parser_tree,
     "src/parser_test_data",
     {
+        bin_expr: "bin_expr",
         constant: "constant",
         enum_: "enum",
         loop_: "loop",

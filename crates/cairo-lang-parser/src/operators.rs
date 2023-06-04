@@ -19,21 +19,23 @@ pub fn get_post_operator_precedence(kind: SyntaxKind) -> Option<usize> {
         SyntaxKind::TerminalAt | SyntaxKind::TerminalNot => Some(2),
         SyntaxKind::TerminalMul | SyntaxKind::TerminalDiv | SyntaxKind::TerminalMod => Some(3),
         SyntaxKind::TerminalPlus | SyntaxKind::TerminalMinus => Some(4),
+        SyntaxKind::TerminalAndAnd => Some(5),
+        SyntaxKind::TerminalOrOr => Some(6),
         SyntaxKind::TerminalEqEq
         | SyntaxKind::TerminalNeq
         | SyntaxKind::TerminalLT
         | SyntaxKind::TerminalGT
         | SyntaxKind::TerminalLE
-        | SyntaxKind::TerminalGE => Some(5),
-        SyntaxKind::TerminalAnd => Some(6),
-        SyntaxKind::TerminalOr => Some(7),
-        SyntaxKind::TerminalXor => Some(8),
+        | SyntaxKind::TerminalGE => Some(7),
+        SyntaxKind::TerminalAnd => Some(8),
+        SyntaxKind::TerminalOr => Some(9),
+        SyntaxKind::TerminalXor => Some(10),
         SyntaxKind::TerminalEq
         | SyntaxKind::TerminalPlusEq
         | SyntaxKind::TerminalMinusEq
         | SyntaxKind::TerminalMulEq
         | SyntaxKind::TerminalDivEq
-        | SyntaxKind::TerminalModEq => Some(9),
+        | SyntaxKind::TerminalModEq => Some(11),
         _ => None,
     }
 }
