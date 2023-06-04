@@ -1,7 +1,8 @@
 # Installation
 
+
 Use [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) to get the correct version of Node
-for this project. From the directory of this file, run:
+for this project. From the directory of `vscode-cairo`(`<path/to/.cairo/vscode-cairo>`), run:
 
 ```
 nvm use
